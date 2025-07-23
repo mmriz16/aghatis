@@ -6,28 +6,32 @@ import Service from './components/service';
 import Trusted from './components/trusted';
 import Testimonials from './components/testimonials';
 import Contact from './components/contact';
+import Footer from './components/footer';
 
 export default function Home() {
   return (
     <div className='font-plus-jakarta'>
       <Navbar />
-      <div className="bg-[#1B1B1B] text-white">
+      <div className="bg-[#1B1B1B] text-white" data-background="dark">
         <Hero />
       </div>
       <RunningText />
-      <div className='mx-auto max-w-7xl'>
+      <div className='mx-auto max-w-7xl' data-background="light">
         <Service />
       </div>
-      <div className="bg-[#f7f7f7]">
+      <div className="bg-[#f7f7f7]" data-background="light">
         <Portfolio />
       </div>
-      <div className='mx-auto max-w-7xl'>
+      <div className='mx-auto max-w-7xl' data-background="light">
         <Trusted />
       </div>
-      <div className="bg-[#1B1B1B] text-white">
+      <div className="bg-[#1B1B1B] text-white" data-background="dark">
         <Testimonials />
       </div>
       <Contact />
+      <div className="bg-[#1B1B1B] text-white" data-background="dark">
+        <Footer />
+      </div>
     </div>
   );
 }

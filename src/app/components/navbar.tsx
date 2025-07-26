@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
+import { Instagram, Linkedin } from 'lucide-react';
 
 export function Navbar() {
   const [ isDarkBackground, setIsDarkBackground ] = useState(true);
@@ -93,7 +94,7 @@ export function Navbar() {
           'border-black/10'
       } z-50 transition-colors duration-300`}
     >
-      <div className="container mx-auto max-w-7xl py-3 px-4">
+      <div className="container mx-auto max-w-7xl py-3">
         <div className="flex justify-between items-center">
           <div className="h-[54px] relative w-[178px]">
             {isDarkBackground ? (
@@ -121,11 +122,19 @@ export function Navbar() {
             <li className="hover:text-[#00A06A] cursor-pointer transition-colors">Services</li>
             <li className="hover:text-[#00A06A] cursor-pointer transition-colors">Portfolio</li>
             <li className="hover:text-[#00A06A] cursor-pointer transition-colors">About</li>
-            <li className="hover:text-[#00A06A] cursor-pointer transition-colors">Contact Us</li>
           </ul>
           <ul className="flex gap-6">
-            <li className="hover:text-[#00A06A] cursor-pointer transition-colors">Instagram</li>
-            <li className="hover:text-[#00A06A] cursor-pointer transition-colors">Linkedin</li>
+            <li className="hover:text-[#00A06A] cursor-pointer transition-colors flex items-center">
+              <a href="https://www.instagram.com/aghatis.id/" target="_blank" className="flex items-center">
+                <Instagram size={20} className="mr-1" />
+              </a>
+            </li>
+            <li className="hover:text-[#00A06A] cursor-pointer transition-colors flex items-center">
+              <a href="https://www.linkedin.com/company/aghatis-solution17/" target="_blank" className="flex items-center">
+                <Linkedin size={20} className="mr-1" />
+              </a>
+            </li>
+            <a href="https://wa.me/628814547922" target="_blank"><button className="bg-[#00704A] hover:bg-[#00704A]/80 transition-colors duration-300 rounded-[16px] text-sm text-white px-5 py-3 cursor-pointer">Contact</button></a>
           </ul>
         </div>
       </div>

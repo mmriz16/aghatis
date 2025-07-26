@@ -34,7 +34,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <p className="text-white/50 text-center font-[16px]">© 2025 Your Company. All rights reserved.</p>
+      <p className="text-white/50 text-center font-[16px]">©2025 PT Aghatis Karya Indonesia. All rights reserved.</p>
     </div>
   );
 }

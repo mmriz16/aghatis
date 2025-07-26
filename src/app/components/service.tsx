@@ -1,4 +1,5 @@
 'use client';
+import { ArrowRight } from 'lucide-react';
 
 export function Service() {
   return (
@@ -9,19 +10,19 @@ export function Service() {
           <p className="text-xl">We showcase the comprehensive range of solutions that we offer to help you achieve your goals.</p>
         </div>
         <div className="col-2">
-          <button className="bg-[#00704A] rounded-[16px] text-lg font-semibold text-white px-5 py-5.5">See Other Service</button>
+          <button className="bg-[#00704A] rounded-[16px] text-lg font-semibold text-white px-5 h-[57px] flex items-center gap-2">See Other Service <ArrowRight className="w-5 h-5" /></button>
         </div>
       </div>
       <div className="grid grid-cols-2 gap-10 pt-11">
         <div className="col-span-1">
-          <img src="/app/img/web-app.png" alt="Service 1" className="w-full h-fit" />
-          <h1 className="text-black font-bold text-[28px]  my-6">Full IT Development</h1>
-          <p className="text-lg text-black/80">Recommended for enterprises and corporations, or individuals who want to create a product with the highest quality.</p>
+          <img src="/app/img/services/ai.jpg" alt="Service 1" className="w-full h-fit rounded-[20px]" />
+          <h1 className="text-black font-bold text-[28px]  my-6">Custom Software Development</h1>
+          <p className="text-lg text-black/80">Tailored software solutions designed to meet your unique business needs and objectives.</p>
         </div>
         <div className="col-span-1">
-          <img src="/app/img/web-app.png" alt="Service 2" className="w-full h-fit" />
-          <h1 className="text-black font-bold text-[28px]  my-6">Connect with Freelancer</h1>
-          <p className="text-lg text-black/80">Recommended for small businesses, individuals, or students with a low budget. We will connect you with our best freelancers.</p>
+          <img src="/app/img/services/ai.jpg" alt="Service 2" className="w-full h-fit rounded-[20px]" />
+          <h1 className="text-black font-bold text-[28px]  my-6">Artificial Intelligence Development</h1>
+          <p className="text-lg text-black/80">Leveraging AI and machine learning to unlock new possibilities and drive efficiency.</p>
         </div>
       </div>
     </div>

@@ -10,6 +10,8 @@ A modern and responsive website showcasing Aghatis' services, portfolio, and exp
 - **Responsive Design**: Fully responsive layout for all devices
 - **Modern UI**: Clean and professional interface
 - **Interactive Elements**: Smooth scrolling, hover effects, and transitions
+- **Social Media Integration**: Instagram and LinkedIn icons with external links
+- **Interactive Logo Display**: Grayscale logos that transform to color on hover
 - **Performance Optimized**: Fast loading and rendering
 
 ## Tech Stack
@@ -18,6 +20,7 @@ A modern and responsive website showcasing Aghatis' services, portfolio, and exp
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS 4
 - **State Management**: React Hooks
+- **Icons**: Lucide React
 - **Images**: Next.js Image Component
 - **Linting**: ESLint with Next.js configuration
 
@@ -39,7 +42,6 @@ aghatis/
 │       │   ├── service.tsx
 │       │   ├── testimonials.tsx
 │       │   └── trusted.tsx
-│       ├── img/         # Image assets
 │       ├── globals.css  # Global styles
 │       ├── layout.tsx   # Root layout
 │       └── page.tsx     # Main page
@@ -53,7 +55,7 @@ aghatis/
 1. Clone the repository:
 
 ```bash
-git clone https://gitlab.aghatis.id/aghatis/new-aghatis.git
+git clone https://github.com/your-username/aghatis.git
 cd aghatis
 ```
 
@@ -80,12 +82,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Key Components
 
-- **Navbar**: Dynamic navigation bar that changes appearance based on scroll position
+- **Navbar**: Dynamic navigation bar that changes appearance based on scroll position and includes social media links
 - **Hero**: Main landing section with call-to-action
 - **Services**: Showcase of company services
 - **Portfolio**: Display of previous work and projects
 - **Testimonials**: Client feedback and reviews
-- **Contact**: Contact form and information
+- **Trusted**: Partner logos with interactive hover effects (grayscale to color)
+- **Contact**: Contact form with WhatsApp integration
+- **Footer**: Site navigation and company information
 
 ## Deployment
 
@@ -93,4 +97,4 @@ The site can be deployed using any platform that supports Next.js applications, 
 
 ## License
 
-All rights reserved by Aghatis.
+All rights reserved by PT Aghatis Karya Indonesia.

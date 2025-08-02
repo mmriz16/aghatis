@@ -10,7 +10,7 @@ export function Contact() {
 
         </div>
         <div className="col-2">
-          <button className="bg-white rounded-[16px] text-lg font-semibold text-[#00704A] px-7 py-5">Let&apos;s Talk</button>
+          <a href="https://wa.me/628814547922" target="_blank"><button className="bg-white rounded-[16px] text-lg font-semibold text-[#00704A] px-7 py-4 cursor-pointer hover:bg-white/80 transition-all duration-300">Let&apos;s Talk</button></a>
         </div>
       </div>
     </div>

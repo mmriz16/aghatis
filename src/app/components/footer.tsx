@@ -1,11 +1,12 @@
 'use client';
+import Image from 'next/image';
 
 export function Footer() {
   return (
     <div className="container mx-auto max-w-7xl pt-16 pb-11">
       <div className="grid grid-cols-12 grid-rows-1 gap-4 mb-11">
         <div className="col-span-6 flex flex-col gap-4">
-          <img src="/app/img/logo-dark.png" alt="logo" className="w-[256px] h-[73px]" />
+          <Image src="/app/img/logo-dark.png" alt="logo" width={256} height={73} />
           <p className="text-white/50 font-[16px]">Elevate Your Digital Experience with Us</p>
         </div>
         <div className="col-span-2">

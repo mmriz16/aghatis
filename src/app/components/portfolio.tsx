@@ -1,5 +1,6 @@
 'use client';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export function Portfolio() {
   return (
@@ -14,7 +15,7 @@ export function Portfolio() {
         </div>
       </div>
       <div className="grid grid-cols-2 gap-10 mt-10">
-        <img src="/app/img/portfolio/barterin.jpg" className="object-cover rounded-2xl" alt="" />
+        <Image src="/app/img/portfolio/barterin.jpg" width={600} height={400} className="object-cover rounded-2xl" alt="Barterin Portfolio" />
         <div className="flex flex-col gap-6 mt-6">
           <h1 className="text-3xl font-bold">Barterin Mobile App</h1>
           <p className="text-base">Barterin redefines transactions through barter, eliminating the need for money. Discover a diverse marketplace, enjoy a seamless experience, and build trust with secure transactions.</p>

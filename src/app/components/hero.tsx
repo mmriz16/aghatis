@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 export function Hero() {
   return (
@@ -9,7 +10,7 @@ export function Hero() {
           <p className="text-[22px] w-[500px]">Web, Android, iOS, <br /> UI/UX Design, Illustration, Icons, 3D Design</p>
         </div>
         <div className="flex justify-center pt-[80px]">
-          <img src="/app/img/cover.png" alt="Hero Image" className="max-w-full h-auto" />
+          <Image src="/app/img/cover.png" alt="Hero Image" width={1200} height={600} className="max-w-full h-auto" />
         </div>
       </div>
     </div>

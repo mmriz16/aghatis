@@ -1,5 +1,6 @@
 'use client';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export function Service() {
   return (
@@ -15,12 +16,12 @@ export function Service() {
       </div>
       <div className="grid grid-cols-2 gap-10 pt-11">
         <div className="col-span-1">
-          <img src="/app/img/services/ai.jpg" alt="Service 1" className="w-full h-fit rounded-[20px]" />
+          <Image src="/app/img/services/ai.jpg" alt="Service 1" width={500} height={300} className="w-full h-fit rounded-[20px]" />
           <h1 className="text-black font-bold text-[28px]  my-6">Custom Software Development</h1>
           <p className="text-lg text-black/80">Tailored software solutions designed to meet your unique business needs and objectives.</p>
         </div>
         <div className="col-span-1">
-          <img src="/app/img/services/ai.jpg" alt="Service 2" className="w-full h-fit rounded-[20px]" />
+          <Image src="/app/img/services/ai.jpg" alt="Service 2" width={500} height={300} className="w-full h-fit rounded-[20px]" />
           <h1 className="text-black font-bold text-[28px]  my-6">Artificial Intelligence Development</h1>
           <p className="text-lg text-black/80">Leveraging AI and machine learning to unlock new possibilities and drive efficiency.</p>
         </div>

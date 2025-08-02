@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono as GeistMono, Plus_Jakarta_Sans as PlusJakartaSans } from 'next/font/google';
 import './globals.css';
+import SmoothScrollProvider from './components/smooth-scroll-provider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -33,7 +34,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${plusJakartaSans.variable} antialiased`}
       >
-        {children}
+        <SmoothScrollProvider>
+          {children}
+        </SmoothScrollProvider>
       </body>
     </html>
   );

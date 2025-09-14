@@ -1,17 +1,75 @@
 'use client';
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function Trusted() {
+  const trustedRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const descRef = useRef<HTMLParagraphElement>(null);
+  const logosRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Set initial states
+      gsap.set([ titleRef.current, descRef.current ], {
+        opacity: 0,
+        y: 30,
+      });
+
+      gsap.set('.logo-item', {
+        opacity: 0,
+        y: 50,
+        scale: 0.8,
+      });
+
+      // Create scroll-triggered animations
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: trustedRef.current,
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none reverse',
+        },
+      })
+        .to(titleRef.current, {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+        })
+        .to(descRef.current, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: 'power3.out',
+        }, '-=0.4')
+        .to('.logo-item', {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.6,
+          ease: 'back.out(1.7)',
+          stagger: 0.1,
+        }, '-=0.2');
+    }, trustedRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="container w-full py-24" data-background="light">
+    <div ref={trustedRef} className="container w-full py-24" data-background="light">
       <div className="flex justify-center text-center mb-12">
         <div className="w-[600px]">
-          <h1 className="text-black font-bold text-[42px] mb-8">More than 3000 companies have <span className="text-[#00A06A]">trusted us</span></h1>
-          <p className="text-xl">We are a team of passionate developers and designers who are dedicated to transforming ideas into visually stunning and immersive experiences that captivate and engage audiences.</p>
+          <h1 ref={titleRef} className="text-black font-bold text-[42px] mb-8">More than 3000 companies have <span className="text-[#00A06A]">trusted us</span></h1>
+          <p ref={descRef} className="text-xl">We are a team of passionate developers and designers who are dedicated to transforming ideas into visually stunning and immersive experiences that captivate and engage audiences.</p>
         </div>
       </div>
-      <div className="grid grid-cols-5 grid-rows-1 gap-6">
-        <div className="bg-[#f7f7f7] w-full h-[130px] rounded-2xl flex justify-center items-center group hover:shadow-[10px_10px_50px_0px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300">
+      <div ref={logosRef} className="grid grid-cols-5 grid-rows-1 gap-6">
+        <div className="logo-item bg-[#f7f7f7] w-full h-[130px] rounded-2xl flex justify-center items-center group hover:shadow-[10px_10px_50px_0px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300">
           <Image
             src="/app/img/logo/unpad.png"
             width={120}
@@ -22,7 +80,7 @@ export function Trusted() {
             alt="Universitas Padjadjaran Logo"
           />
         </div>
-        <div className="bg-[#f7f7f7] w-full h-[130px] rounded-2xl flex justify-center items-center group hover:shadow-[10px_10px_50px_0px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300">
+        <div className="logo-item bg-[#f7f7f7] w-full h-[130px] rounded-2xl flex justify-center items-center group hover:shadow-[10px_10px_50px_0px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300">
           <Image
             src="/app/img/logo/stmik-bandung.png"
             width={120}
@@ -33,7 +91,7 @@ export function Trusted() {
             alt="STMIK Bandung Logo"
           />
         </div>
-        <div className="bg-[#f7f7f7] w-full h-[130px] rounded-2xl flex justify-center items-center group hover:shadow-[10px_10px_50px_0px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300">
+        <div className="logo-item bg-[#f7f7f7] w-full h-[130px] rounded-2xl flex justify-center items-center group hover:shadow-[10px_10px_50px_0px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300">
           <Image
             src="/app/img/logo/unwim.png"
             width={120}
@@ -44,7 +102,7 @@ export function Trusted() {
             alt="Universitas Widyatama Logo"
           />
         </div>
-        <div className="bg-[#f7f7f7] w-full h-[130px] rounded-2xl flex justify-center items-center group hover:shadow-[10px_10px_50px_0px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300">
+        <div className="logo-item bg-[#f7f7f7] w-full h-[130px] rounded-2xl flex justify-center items-center group hover:shadow-[10px_10px_50px_0px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300">
           <Image
             src="/app/img/logo/google.png"
             width={120}
@@ -55,7 +113,7 @@ export function Trusted() {
             alt="Google Logo"
           />
         </div>
-        <div className="bg-[#f7f7f7] w-full h-[130px] rounded-2xl flex justify-center items-center group hover:shadow-[10px_10px_50px_0px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300">
+        <div className="logo-item bg-[#f7f7f7] w-full h-[130px] rounded-2xl flex justify-center items-center group hover:shadow-[10px_10px_50px_0px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300">
           <Image
             src="/app/img/logo/google.png"
             width={120}

@@ -1,14 +1,77 @@
 'use client';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function Contact() {
+  const contactRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Set initial states
+      gsap.set(contactRef.current, {
+        opacity: 0,
+        y: 50,
+        scale: 0.95,
+      });
+
+      gsap.set(contentRef.current, {
+        opacity: 0,
+        x: -30,
+      });
+
+      gsap.set(buttonRef.current, {
+        opacity: 0,
+        x: 30,
+        scale: 0.9,
+      });
+
+      // Create scroll-triggered animations
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none reverse',
+        },
+      })
+        .to(contactRef.current, {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          ease: 'back.out(1.7)',
+        })
+        .to(contentRef.current, {
+          opacity: 1,
+          x: 0,
+          duration: 0.6,
+          ease: 'power3.out',
+        }, '-=0.4')
+        .to(buttonRef.current, {
+          opacity: 1,
+          x: 0,
+          scale: 1,
+          duration: 0.6,
+          ease: 'back.out(1.7)',
+        }, '-=0.3');
+    }, contactRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="container py-16 px-10 my-[100px] mx-auto max-w-7xl bg-[#00704A] text-white rounded-4xl" data-background="dark">
+    <div ref={contactRef} className="container py-16 px-10 my-[100px] mx-auto max-w-7xl bg-[#00704A] text-white rounded-4xl" data-background="dark">
       <div className="flex justify-between items-center">
-        <div className="col-4 w-[790px]">
+        <div ref={contentRef} className="col-4 w-[790px]">
           <h1 className="font-bold text-[42px] mb-2">Have a Wonderfull idea?</h1>
           <p className="text-xl text-white/75 font-medium leading-7">Let&apos;s make your project a success together by harnessing our expertise and passion for delivering exceptional design solutions.</p>
         </div>
-        <div className="col-2">
+        <div ref={buttonRef} className="col-2">
           <a href="https://wa.me/628814547922" target="_blank"><button className="bg-white rounded-[16px] text-lg font-semibold text-[#00704A] px-7 py-4 cursor-pointer hover:bg-white/80 transition-all duration-300">Let&apos;s Talk</button></a>
         </div>
       </div>

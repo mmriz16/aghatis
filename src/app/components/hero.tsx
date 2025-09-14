@@ -10,7 +10,16 @@ export function Hero() {
           <p className="text-[22px] w-[500px]">Web, Android, iOS, <br /> UI/UX Design, Illustration, Icons, 3D Design</p>
         </div>
         <div className="flex justify-center pt-[80px]">
-          <Image src="/app/img/cover.png" alt="Hero Image" width={1200} height={600} className="max-w-full h-auto" />
+          <Image
+            src="/app/img/cover.png"
+            alt="Aghatis Solution - Digital Experience & Software Development"
+            width={1200}
+            height={600}
+            quality={90}
+            priority={true}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+            className="max-w-full h-auto object-cover rounded-lg shadow-lg"
+          />
         </div>
       </div>
     </div>

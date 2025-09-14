@@ -62,17 +62,17 @@ export function Service() {
   }, []);
 
   return (
-    <div ref={serviceRef} className="container py-24" data-background="light">
-      <div className="flex justify-between items-center">
-        <div ref={headerRef} className="col-4 w-[580px]">
-          <h1 className="text-[#00A06A] font-bold text-[42px]  mb-8">Our <span className="text-black">Services</span></h1>
-          <p className="text-xl">We showcase the comprehensive range of solutions that we offer to help you achieve your goals.</p>
+    <div ref={serviceRef} className="container py-12 md:py-16 lg:py-24 px-4 md:px-6 lg:px-8" data-background="light">
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 lg:gap-0">
+        <div ref={headerRef} className="w-full lg:w-[580px]">
+          <h1 className="text-[#00A06A] font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[42px] mb-4 lg:mb-8 text-center lg:text-left">Our <span className="text-black">Services</span></h1>
+          <p className="text-base md:text-lg lg:text-xl text-center lg:text-left">We showcase the comprehensive range of solutions that we offer to help you achieve your goals.</p>
         </div>
-        <div className="col-2">
-          <button ref={buttonRef} className="bg-[#00704A] rounded-[16px] text-lg font-semibold text-white px-5 h-[57px] flex items-center gap-2 hover:bg-[#00A06A] transition-colors duration-300">See Other Service <ArrowRight className="w-5 h-5" /></button>
+        <div className="flex justify-center lg:justify-end">
+          <button ref={buttonRef} className="bg-[#00704A] rounded-[16px] text-sm md:text-base lg:text-lg font-semibold text-white px-4 md:px-5 h-[48px] md:h-[57px] flex items-center gap-2 hover:bg-[#00A06A] transition-colors duration-300">See Other Service <ArrowRight className="w-4 h-4 md:w-5 md:h-5" /></button>
         </div>
       </div>
-      <div ref={cardsRef} className="grid grid-cols-2 gap-10 pt-11">
+      <div ref={cardsRef} className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10 pt-8 md:pt-10 lg:pt-11">
         <div className="service-card col-span-1">
           <Image
             src="/app/img/services/code.jpg"
@@ -83,8 +83,8 @@ export function Service() {
             sizes="(max-width: 768px) 100vw, 50vw"
             className="w-full h-fit rounded-[20px] object-cover hover:scale-105 transition-transform duration-300"
           />
-          <h1 className="text-black font-bold text-[28px]  my-6">Custom Software Development</h1>
-          <p className="text-lg text-black/80">Tailored software solutions designed to meet your unique business needs and objectives.</p>
+          <h1 className="text-black font-bold text-xl md:text-2xl lg:text-[28px] my-4 md:my-5 lg:my-6">Custom Software Development</h1>
+          <p className="text-base md:text-lg text-black/80">Tailored software solutions designed to meet your unique business needs and objectives.</p>
         </div>
         <div className="service-card col-span-1">
           <Image
@@ -96,8 +96,8 @@ export function Service() {
             sizes="(max-width: 768px) 100vw, 50vw"
             className="w-full h-fit rounded-[20px] object-cover hover:scale-105 transition-transform duration-300"
           />
-          <h1 className="text-black font-bold text-[28px]  my-6">Artificial Intelligence Development</h1>
-          <p className="text-lg text-black/80">Leveraging AI and machine learning to unlock new possibilities and drive efficiency.</p>
+          <h1 className="text-black font-bold text-xl md:text-2xl lg:text-[28px] my-4 md:my-5 lg:my-6">Artificial Intelligence Development</h1>
+          <p className="text-base md:text-lg text-black/80">Leveraging AI and machine learning to unlock new possibilities and drive efficiency.</p>
         </div>
       </div>
     </div>

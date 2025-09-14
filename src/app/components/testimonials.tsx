@@ -78,23 +78,23 @@ export function Testimonials() {
   }, []);
 
   return (
-    <div ref={testimonialsRef} className="container py-24 max-w-7xl mx-auto">
-      <Image ref={quoteRef} src="/app/img/quote.png" width={52} height={42} className="w-[52px] h-[42px] mb-[34px]" alt="quote" />
-      <p ref={textRef} className="text-4xl font-medium leading-[45px] mb-[34px]">Agathis Solution expertise exceeded my expectations. They brought our vision to life with precision and creativity, delivering a stunning and user-friendly interface.</p>
-      <div className="flex justify-between items-center">
-        <div className="col-6">
-          <div ref={profileRef} className="flex gap-6 items-center">
-            <Image src="/app/img/testimonials/miftakhul-rizky.jpg" width={68} height={68} className="w-[68px] h-[68px] rounded-full" alt="profile" />
+    <div ref={testimonialsRef} className="container py-12 md:py-16 lg:py-24 max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      <Image ref={quoteRef} src="/app/img/quote.png" width={52} height={42} className="w-[40px] h-[32px] md:w-[52px] md:h-[42px] mb-6 md:mb-8 lg:mb-[34px]" alt="quote" />
+      <p ref={textRef} className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed md:leading-[45px] mb-6 md:mb-8 lg:mb-[34px] text-center lg:text-left">Agathis Solution expertise exceeded my expectations. They brought our vision to life with precision and creativity, delivering a stunning and user-friendly interface.</p>
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 lg:gap-0">
+        <div className="w-full lg:w-auto">
+          <div ref={profileRef} className="flex gap-4 md:gap-6 items-center justify-center lg:justify-start">
+            <Image src="/app/img/testimonials/miftakhul-rizky.jpg" width={68} height={68} className="w-[56px] h-[56px] md:w-[68px] md:h-[68px] rounded-full" alt="profile" />
             <div className="" id="name">
-              <h1 className="text-2xl font-medium">Miftakhul Rizky</h1>
-              <p className="text-base font-medium text-white/50">Founder Termicons</p>
+              <h1 className="text-lg md:text-xl lg:text-2xl font-medium">Miftakhul Rizky</h1>
+              <p className="text-sm md:text-base font-medium text-white/50">Founder Termicons</p>
             </div>
           </div>
         </div>
-        <div className="col-6">
-          <div ref={buttonsRef} className="flex gap-5">
-            <button className="bg-white/10 rounded-[16px] p-3 hover:bg-white/20 transition-all duration-300 cursor-pointer"><ArrowLeft className="w-5 h-5" /></button>
-            <button className="bg-white/10 rounded-[16px] p-3 hover:bg-white/20 transition-all duration-300 cursor-pointer"><ArrowRight className="w-5 h-5" /></button>
+        <div className="w-full lg:w-auto">
+          <div ref={buttonsRef} className="flex gap-4 md:gap-5 justify-center lg:justify-end">
+            <button className="bg-white/10 rounded-[16px] p-2 md:p-3 hover:bg-white/20 transition-all duration-300 cursor-pointer"><ArrowLeft className="w-4 h-4 md:w-5 md:h-5" /></button>
+            <button className="bg-white/10 rounded-[16px] p-2 md:p-3 hover:bg-white/20 transition-all duration-300 cursor-pointer"><ArrowRight className="w-4 h-4 md:w-5 md:h-5" /></button>
           </div>
         </div>
       </div>

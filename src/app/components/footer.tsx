@@ -63,7 +63,7 @@ export function Footer() {
   }, []);
 
   return (
-    <div ref={footerRef} className="container mx-auto max-w-7xl pt-12 md:pt-14 lg:pt-16 pb-8 md:pb-10 lg:pb-11 px-4 md:px-6 lg:px-8">
+    <div ref={footerRef} className="container mx-auto max-w-7xl pt-12 md:pt-14 lg:pt-16 pb-8 md:pb-10 lg:pb-11">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 md:gap-8 lg:gap-4 mb-8 md:mb-10 lg:mb-11">
         <div ref={logoRef} className="lg:col-span-6 flex flex-col gap-3 md:gap-4 text-center md:text-left">
           <Image src="/app/img/logo-dark.png" alt="logo" width={256} height={73} className="mx-auto md:mx-0" />

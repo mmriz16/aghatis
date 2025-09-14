@@ -45,10 +45,10 @@ export function Hero() {
 
   return (
     <div ref={heroRef} className="min-h-screen flex flex-col justify-center">
-      <div className="container mx-auto max-w-7xl pt-10 px-4 md:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-8 lg:gap-[100px]">
-          <h1 ref={titleRef} className="text-4xl sm:text-5xl md:text-6xl lg:text-[84px] font-bold w-full leading-tight sm:leading-tight md:leading-tight lg:leading-[106px] text-center lg:text-left">Elevate Your Digital <span className="text-[#00A06A]">Experience</span> with Us</h1>
-          <p ref={subtitleRef} className="text-lg sm:text-xl lg:text-[22px] w-full lg:w-[500px] text-center lg:text-left">Web, Android, iOS, <br className="hidden lg:block" /> UI/UX Design, Illustration, Icons, 3D Design</p>
+      <div className="container mx-auto max-w-7xl pt-10">
+        <div className="flex justify-between items-center gap-[100px]">
+          <h1 ref={titleRef} className="text-[84px] font-bold w-full leading-[106px]">Elevate Your Digital <span className="text-[#00A06A]">Experience</span> with Us</h1>
+          <p ref={subtitleRef} className="text-[22px] w-[500px]">Web, Android, iOS, <br /> UI/UX Design, Illustration, Icons, 3D Design</p>
         </div>
         <div ref={imageRef} className="flex justify-center pt-8 md:pt-12 lg:pt-[80px]">
           <Image

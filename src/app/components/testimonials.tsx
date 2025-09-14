@@ -78,7 +78,7 @@ export function Testimonials() {
   }, []);
 
   return (
-    <div ref={testimonialsRef} className="container py-12 md:py-16 lg:py-24 max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+    <div ref={testimonialsRef} className="container py-12 md:py-16 lg:py-24 max-w-7xl mx-auto">
       <Image ref={quoteRef} src="/app/img/quote.png" width={52} height={42} className="w-[40px] h-[32px] md:w-[52px] md:h-[42px] mb-6 md:mb-8 lg:mb-[34px]" alt="quote" />
       <p ref={textRef} className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed md:leading-[45px] mb-6 md:mb-8 lg:mb-[34px] text-center lg:text-left">Agathis Solution expertise exceeded my expectations. They brought our vision to life with precision and creativity, delivering a stunning and user-friendly interface.</p>
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 lg:gap-0">

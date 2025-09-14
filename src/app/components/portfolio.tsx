@@ -61,7 +61,7 @@ export function Portfolio() {
   }, []);
 
   return (
-    <div ref={portfolioRef} className="container py-12 md:py-16 lg:py-24 max-w-7xl mx-auto px-4 md:px-6 lg:px-8" data-background="light">
+    <div ref={portfolioRef} className="container py-12 md:py-16 lg:py-24 max-w-7xl mx-auto" data-background="light">
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 lg:gap-0">
         <div ref={headerRef} className="w-full lg:w-[580px]">
           <h1 className="text-[#00A06A] font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[42px] mb-4 lg:mb-8 text-center lg:text-left">Our <span className="text-black">Portfolios</span></h1>

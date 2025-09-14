@@ -61,7 +61,7 @@ export function Trusted() {
   }, []);
 
   return (
-    <div ref={trustedRef} className="container w-full py-12 md:py-16 lg:py-24 px-4 md:px-6 lg:px-8" data-background="light">
+    <div ref={trustedRef} className="container w-full py-12 md:py-16 lg:py-24" data-background="light">
       <div className="flex justify-center text-center mb-8 md:mb-10 lg:mb-12">
         <div className="w-full max-w-[600px]">
           <h1 ref={titleRef} className="text-black font-bold text-2xl sm:text-3xl md:text-4xl lg:text-[42px] mb-4 md:mb-6 lg:mb-8">More than 3000 companies have <span className="text-[#00A06A]">trusted us</span></h1>

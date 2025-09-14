@@ -12,24 +12,26 @@ export default function Home() {
   return (
     <div className='font-plus-jakarta'>
       <Navbar />
-      <div className="bg-[#1B1B1B] text-white" data-background="dark">
+      <div className="bg-[#1B1B1B] text-white px-4 md:px-0" data-background="dark">
         <Hero />
       </div>
       <RunningText />
-      <div className='mx-auto max-w-7xl' data-background="light">
+      <div className='mx-auto max-w-7xl px-4 md:px-0' data-background="light">
         <Service />
       </div>
-      <div className="bg-[#f7f7f7]" data-background="light">
+      <div className="bg-[#f7f7f7] px-4 md:px-0" data-background="light">
         <Portfolio />
       </div>
-      <div className='mx-auto max-w-7xl' data-background="light">
+      <div className='mx-auto max-w-7xl px-4 md:px-0' data-background="light">
         <Trusted />
       </div>
-      <div className="bg-[#1B1B1B] text-white" data-background="dark">
+      <div className="bg-[#1B1B1B] text-white px-4 md:px-0" data-background="dark">
         <Testimonials />
       </div>
-      <Contact />
-      <div className="bg-[#1B1B1B] text-white" data-background="dark">
+      <div className="px-4 md:px-0">
+        <Contact />
+      </div>
+      <div className="bg-[#1B1B1B] text-white px-4 md:px-0" data-background="dark">
         <Footer />
       </div>
     </div>

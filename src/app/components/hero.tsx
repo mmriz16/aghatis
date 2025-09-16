@@ -46,9 +46,9 @@ export function Hero() {
   return (
     <div ref={heroRef} className="min-h-screen flex flex-col justify-center">
       <div className="container mx-auto max-w-7xl pt-10">
-        <div className="flex justify-between items-center gap-[100px]">
-          <h1 ref={titleRef} className="text-[84px] font-bold w-full leading-[106px]">Elevate Your Digital <span className="text-[#00A06A]">Experience</span> with Us</h1>
-          <p ref={subtitleRef} className="text-[22px] w-[500px]">Web, Android, iOS, <br /> UI/UX Design, Illustration, Icons, 3D Design</p>
+        <div className="flex flex-col sm:flex-row justify-between items-center  sm:gap-[100px]">
+          <h1 ref={titleRef} className="text-[32px] font-bold w-full text-center sm:text-left sm:text-[64px]">Elevate Your Digital <span className="text-[#00A06A]">Experience</span> with Us</h1>
+          <p ref={subtitleRef} className="text-[18px] sm:text-[24px] text-center sm:text-left w-[500px]">Web, Android, iOS, <br /> UI/UX Design, Illustration, Icons, 3D Design</p>
         </div>
         <div ref={imageRef} className="flex justify-center pt-8 md:pt-12 lg:pt-[80px]">
           <Image

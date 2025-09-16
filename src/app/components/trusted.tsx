@@ -68,7 +68,7 @@ export function Trusted() {
           <p ref={descRef} className="text-base md:text-lg lg:text-xl">We are a team of passionate developers and designers who are dedicated to transforming ideas into visually stunning and immersive experiences that captivate and engage audiences.</p>
         </div>
       </div>
-      <div ref={logosRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5 lg:gap-6">
+      <div ref={logosRef} className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5 lg:gap-6">
         <div className="logo-item bg-[#f7f7f7] w-full h-[100px] md:h-[120px] lg:h-[130px] rounded-2xl flex justify-center items-center group hover:shadow-[10px_10px_50px_0px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300">
           <Image
             src="/app/img/logo/unpad.png"
@@ -102,7 +102,7 @@ export function Trusted() {
             alt="Universitas Widyatama Logo"
           />
         </div>
-        <div className="logo-item bg-[#f7f7f7] w-full h-[100px] md:h-[120px] lg:h-[130px] rounded-2xl flex justify-center items-center group hover:shadow-[10px_10px_50px_0px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300">
+        <div className="logo-item bg-[#f7f7f7] w-full h-[100px] md:h-[120px] lg:h-[130px] rounded-2xl hidden lg:flex justify-center items-center group hover:shadow-[10px_10px_50px_0px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300">
           <Image
             src="/app/img/logo/google.png"
             width={120}
@@ -113,7 +113,7 @@ export function Trusted() {
             alt="Google Logo"
           />
         </div>
-        <div className="logo-item bg-[#f7f7f7] w-full h-[100px] md:h-[120px] lg:h-[130px] rounded-2xl flex justify-center items-center group hover:shadow-[10px_10px_50px_0px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300">
+        <div className="logo-item bg-[#f7f7f7] w-full h-[100px] md:h-[120px] lg:h-[130px] rounded-2xl hidden lg:flex justify-center items-center group hover:shadow-[10px_10px_50px_0px_rgba(0,0,0,0.08)] hover:bg-white transition-all duration-300">
           <Image
             src="/app/img/logo/google.png"
             width={120}
